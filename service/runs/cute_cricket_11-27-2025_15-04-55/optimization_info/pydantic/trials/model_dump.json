@@ -1,0 +1,40 @@
+{
+    "regex": [],
+    "embedding": [],
+    "scoring": [
+        {
+            "module_name": "linear",
+            "module_params": {
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.3333333333333333,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.3333333333333333
+            }
+        }
+    ],
+    "decision": []
+}

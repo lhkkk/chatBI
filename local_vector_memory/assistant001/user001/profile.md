@@ -1,0 +1,1 @@
+[2d5a96][mentioned at 2025-09-09] user001 is a novice seeking to establish a foundational understanding of deep learning concepts before practical application []

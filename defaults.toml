@@ -1,0 +1,83 @@
+# defaults.toml
+# 全局默认（当规则/LLM未能抽取到时使用这些回退值）
+
+# 默认源端与目的端（若完全未提供）
+[source]
+default = "全网"
+
+[destination]
+default = "全网"
+
+# 时间、方向、单位等默认
+[time]
+# 例如："近一个月"、"最近7天"、"上月"、"最近24小时"
+default = "近一个月"
+
+[direction]
+# 默认流量方向： 流出 / 流入 / 双向
+default = "流出"
+
+[speed_unit]
+# 默认流速单位
+default = "Mbps"
+
+# 默认的聚合与细分说明
+[requirement_defaults]
+aggregation = "按天聚合"
+# 默认的细分说明（当无法推断到具体组合时使用）
+breakdown = "按源端类型与目的端类型的组合进行细分"
+
+# 默认类型推断
+[type_defaults]
+source_type = "IDC和MAN"
+destination_type = "IDC和MAN"
+
+# 问句改写相关
+[rewrite]
+# 要生成的相似问题数量
+n = 3
+
+# 合并 / 决策阈值（rule 与 llm 置信度阈值）
+[scoring]
+# 若规则置信度 >= thr_rule 则优先使用规则结果
+thr_rule = 0.90
+# 若 LLM 置信度 >= thr_llm 且显著高于规则置信度则优先使用 LLM
+thr_llm = 0.70
+# 当 LLM 击败规则所需的最小差值（llm_conf > rule_conf + delta）
+delta = 0.15
+
+# 词典 / 同义词（可扩充）
+# 用于规则抽取、关键词映射、三级场景启发式判断等
+[vocab]
+# 类型指示器（用于识别 source_type/destination_type）
+type_indicators = ["IDC", "MAN", "交换机", "骨干", "客户", "账号", "用户"]
+
+# 单位候选（规则检测）
+unit_candidates = ["Gbps", "Mbps", "Gb", "Mb"]
+
+# 聚合关键词同义词（用于检测用户要求的聚合方式）
+[ vocab.agg_keywords ]
+"按月聚合" = ["按月", "每月", "月", "按月份"]
+"按日聚合" = ["按日", "每天", "日"]
+"按小时聚合" = ["按小时", "每小时", "小时"]
+
+# 三级场景关键词映射（启发式）
+# 键是三级场景名称，值是其可能命中的同义词数组（小写/短语）
+[ third_keywords ]
+"单IP" = ["单ip", "单ip地址", "ip地址"]
+"IP段" = ["ip段", "网段", "cidr"]
+"TOPIP" = ["top ip", "topip", "top ip地址"]
+"端口" = ["端口", "port"]
+"单客户" = ["客户", "账号", "客户号", "user", "cust"]
+"客户IP段聚合" = ["客户ip段", "客户 ip 段"]
+"TOP账号" = ["top账号", "top 账号", "top", "前十", "前十名"]
+"时间聚合" = ["按月", "按日", "按小时", "聚合"]
+"95峰值流量" = ["95", "95峰", "95th", "95%"]
+"国际" = ["国际", "境外", "海外"]
+"省际" = ["省际", "跨省", "外省"]
+"地市" = ["地市", "地级市", "市"]
+
+# 可选：用于日志/审计的默认最大候选数
+[limits]
+max_keywords = 20
+max_rewrites = 5

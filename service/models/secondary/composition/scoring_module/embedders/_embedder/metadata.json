@@ -1,0 +1,8 @@
+{
+    "model_name": "intfloat/multilingual-e5-large-instruct",
+    "device": null,
+    "batch_size": 32,
+    "max_length": null,
+    "use_cache": true,
+    "similarity_fn_name": "cosine"
+}

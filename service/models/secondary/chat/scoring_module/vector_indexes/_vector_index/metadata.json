@@ -1,0 +1,7 @@
+{
+    "embedder_max_length": null,
+    "embedder_model_name": "intfloat/multilingual-e5-large-instruct",
+    "embedder_device": null,
+    "embedder_batch_size": 32,
+    "embedder_use_cache": true
+}

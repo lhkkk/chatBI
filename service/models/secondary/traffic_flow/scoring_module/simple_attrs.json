@@ -1,0 +1,7 @@
+{
+    "k": 4,
+    "weights": "uniform",
+    "_n_classes": 3,
+    "_multilabel": false,
+    "_oos": false
+}

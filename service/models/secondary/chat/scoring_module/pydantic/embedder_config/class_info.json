@@ -1,0 +1,4 @@
+{
+    "name": "EmbedderConfig",
+    "module": "autointent.configs._transformers"
+}

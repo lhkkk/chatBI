@@ -1,0 +1,387 @@
+{
+    "regex": [],
+    "embedding": [],
+    "scoring": [
+        {
+            "module_name": "linear",
+            "module_params": {
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.3333333333333333,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.3333333333333333
+            }
+        },
+        {
+            "module_name": "knn",
+            "module_params": {
+                "k": 4,
+                "weights": "closest",
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.39285714285714285,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.39285714285714285
+            }
+        },
+        {
+            "module_name": "knn",
+            "module_params": {
+                "k": 13,
+                "weights": "closest",
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.39285714285714285,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.39285714285714285
+            }
+        },
+        {
+            "module_name": "knn",
+            "module_params": {
+                "k": 7,
+                "weights": "distance",
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.5416666666666666,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.5416666666666666
+            }
+        },
+        {
+            "module_name": "knn",
+            "module_params": {
+                "k": 8,
+                "weights": "distance",
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.4583333333333333,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.4583333333333333
+            }
+        },
+        {
+            "module_name": "knn",
+            "module_params": {
+                "k": 20,
+                "weights": "distance",
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.5595238095238095,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.5595238095238095
+            }
+        },
+        {
+            "module_name": "knn",
+            "module_params": {
+                "k": 18,
+                "weights": "uniform",
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.1,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.1
+            }
+        },
+        {
+            "module_name": "knn",
+            "module_params": {
+                "k": 16,
+                "weights": "uniform",
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.2777777777777778,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.2777777777777778
+            }
+        },
+        {
+            "module_name": "knn",
+            "module_params": {
+                "k": 16,
+                "weights": "distance",
+                "embedder_config": {
+                    "model_name": "intfloat/multilingual-e5-large-instruct",
+                    "batch_size": 32,
+                    "device": null,
+                    "bf16": false,
+                    "fp16": false,
+                    "tokenizer_config": {
+                        "padding": true,
+                        "truncation": true,
+                        "max_length": null
+                    },
+                    "trust_remote_code": false,
+                    "default_prompt": null,
+                    "classification_prompt": null,
+                    "cluster_prompt": null,
+                    "sts_prompt": null,
+                    "query_prompt": null,
+                    "passage_prompt": null,
+                    "similarity_fn_name": "cosine",
+                    "use_cache": true,
+                    "freeze": true
+                }
+            },
+            "metric_name": "scoring_f1",
+            "metric_value": 0.5595238095238095,
+            "module_dump_dir": null,
+            "metrics": {
+                "scoring_f1": 0.5595238095238095
+            }
+        }
+    ],
+    "decision": [
+        {
+            "module_name": "argmax",
+            "module_params": {},
+            "metric_name": "decision_accuracy",
+            "metric_value": 0.625,
+            "module_dump_dir": null,
+            "metrics": {
+                "decision_accuracy": 0.625
+            }
+        },
+        {
+            "module_name": "tunable",
+            "module_params": {},
+            "metric_name": "decision_accuracy",
+            "metric_value": 0.625,
+            "module_dump_dir": null,
+            "metrics": {
+                "decision_accuracy": 0.625
+            }
+        },
+        {
+            "module_name": "threshold",
+            "module_params": {
+                "thresh": 0.3433937943676302
+            },
+            "metric_name": "decision_accuracy",
+            "metric_value": 0.625,
+            "module_dump_dir": null,
+            "metrics": {
+                "decision_accuracy": 0.625
+            }
+        },
+        {
+            "module_name": "threshold",
+            "module_params": {
+                "thresh": 0.13716033017599819
+            },
+            "metric_name": "decision_accuracy",
+            "metric_value": 0.625,
+            "module_dump_dir": null,
+            "metrics": {
+                "decision_accuracy": 0.625
+            }
+        },
+        {
+            "module_name": "threshold",
+            "module_params": {
+                "thresh": 0.6473864212097256
+            },
+            "metric_name": "decision_accuracy",
+            "metric_value": 0.125,
+            "module_dump_dir": null,
+            "metrics": {
+                "decision_accuracy": 0.125
+            }
+        },
+        {
+            "module_name": "jinoos",
+            "module_params": {},
+            "metric_name": "decision_accuracy",
+            "metric_value": 0.625,
+            "module_dump_dir": null,
+            "metrics": {
+                "decision_accuracy": 0.625
+            }
+        }
+    ]
+}

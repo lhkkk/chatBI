@@ -1,0 +1,7 @@
+{
+    "k": 20,
+    "weights": "distance",
+    "_n_classes": 4,
+    "_multilabel": false,
+    "_oos": false
+}

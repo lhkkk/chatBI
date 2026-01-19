@@ -1,0 +1,30 @@
+- load_path: models/secondary/anomaly/scoring_module
+  module_config:
+    embedder_config:
+      batch_size: 32
+      bf16: false
+      classification_prompt: null
+      cluster_prompt: null
+      default_prompt: null
+      device: null
+      fp16: false
+      freeze: true
+      model_name: intfloat/multilingual-e5-large-instruct
+      passage_prompt: null
+      query_prompt: null
+      similarity_fn_name: cosine
+      sts_prompt: null
+      tokenizer_config:
+        max_length: null
+        padding: true
+        truncation: true
+      trust_remote_code: false
+      use_cache: true
+    k: 4
+    weights: closest
+  module_name: knn
+  node_type: scoring
+- load_path: models/secondary/anomaly/decision_module
+  module_config: {}
+  module_name: argmax
+  node_type: decision

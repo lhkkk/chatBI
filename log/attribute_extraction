@@ -1,0 +1,176 @@
+2026-01-10 15:49:14,567 - attribute_extraction_service.py[line:246] - INFO - 开始属性提取 - 查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:49:14,567 - attribute_extraction_service.py[line:249] - INFO - === 开始规则提取阶段 ===
+2026-01-10 15:49:14,570 - attribute_extraction_service.py[line:251] - INFO - 规则提取完成 - 结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:49:14,570 - attribute_extraction_service.py[line:261] - INFO - LLM未启用，仅使用规则提取结果
+2026-01-10 15:49:53,043 - attribute_extraction_service.py[line:252] - INFO - 开始属性提取 - 查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:49:53,043 - attribute_extraction_service.py[line:255] - INFO - === 开始规则提取阶段 ===
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:257] - INFO - 规则提取完成 - 结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:261] - INFO - === 开始大模型核验和修正阶段 ===
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1788] - INFO - 开始大模型核验和修正
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1789] - INFO - 输入查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1790] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1801] - INFO - 开始调用大模型API进行核验和修正
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1828] - ERROR - 大模型调用失败: Missing some input keys: {'\n  "attributes"'}
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1829] - INFO - 使用规则提取结果作为回退
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1835] - INFO - === 开始属性合并阶段 ===
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1836] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1837] - INFO - 大模型修正结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1874] - INFO - 属性合并差异对比:
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   源端: 规则和大模型都缺失
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   对端: 规则和大模型一致 -> 上海的情况
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   源端类型: 规则和大模型都缺失
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   对端类型: 规则和大模型一致 -> IDC+MAN
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   时间: 规则和大模型一致 -> 昨天
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   时间粒度: 规则和大模型一致 -> 逐时
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   流向: 规则和大模型一致 -> ['流出']
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   数据类型: 规则和大模型一致 -> 流量均值
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   剔除条件: 规则和大模型都缺失
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   模糊匹配: 规则和大模型都缺失
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   上行下行: 规则和大模型一致 -> 上行
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1876] - INFO -   补充信息: 规则和大模型都缺失
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:1878] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:49:53,046 - attribute_extraction_service.py[line:264] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:51:43,469 - attribute_extraction_service.py[line:252] - INFO - 开始属性提取 - 查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:51:43,470 - attribute_extraction_service.py[line:255] - INFO - === 开始规则提取阶段 ===
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:257] - INFO - 规则提取完成 - 结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:261] - INFO - === 开始大模型核验和修正阶段 ===
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1788] - INFO - 开始大模型核验和修正
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1789] - INFO - 输入查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1790] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1801] - INFO - 开始调用大模型API进行核验和修正
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1828] - ERROR - 大模型调用失败: Missing some input keys: {'\n  "attributes"'}
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1829] - INFO - 使用规则提取结果作为回退
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1835] - INFO - === 开始属性合并阶段 ===
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1836] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1837] - INFO - 大模型修正结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1874] - INFO - 属性合并差异对比:
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1876] - INFO -   源端: 规则和大模型都缺失
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1876] - INFO -   对端: 规则和大模型一致 -> 上海的情况
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1876] - INFO -   源端类型: 规则和大模型都缺失
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1876] - INFO -   对端类型: 规则和大模型一致 -> IDC+MAN
+2026-01-10 15:51:43,472 - attribute_extraction_service.py[line:1876] - INFO -   时间: 规则和大模型一致 -> 昨天
+2026-01-10 15:51:43,473 - attribute_extraction_service.py[line:1876] - INFO -   时间粒度: 规则和大模型一致 -> 逐时
+2026-01-10 15:51:43,473 - attribute_extraction_service.py[line:1876] - INFO -   流向: 规则和大模型一致 -> ['流出']
+2026-01-10 15:51:43,473 - attribute_extraction_service.py[line:1876] - INFO -   数据类型: 规则和大模型一致 -> 流量均值
+2026-01-10 15:51:43,473 - attribute_extraction_service.py[line:1876] - INFO -   剔除条件: 规则和大模型都缺失
+2026-01-10 15:51:43,473 - attribute_extraction_service.py[line:1876] - INFO -   模糊匹配: 规则和大模型都缺失
+2026-01-10 15:51:43,473 - attribute_extraction_service.py[line:1876] - INFO -   上行下行: 规则和大模型一致 -> 上行
+2026-01-10 15:51:43,473 - attribute_extraction_service.py[line:1876] - INFO -   补充信息: 规则和大模型都缺失
+2026-01-10 15:51:43,473 - attribute_extraction_service.py[line:1878] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:51:43,473 - attribute_extraction_service.py[line:264] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:11,205 - attribute_extraction_service.py[line:252] - INFO - 开始属性提取 - 查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:53:11,205 - attribute_extraction_service.py[line:255] - INFO - === 开始规则提取阶段 ===
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:257] - INFO - 规则提取完成 - 结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:261] - INFO - === 开始大模型核验和修正阶段 ===
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1788] - INFO - 开始大模型核验和修正
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1789] - INFO - 输入查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1790] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1801] - INFO - 开始调用大模型API进行核验和修正
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1828] - ERROR - 大模型调用失败: Missing some input keys: {'\n  "attributes"'}
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1829] - INFO - 使用规则提取结果作为回退
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1835] - INFO - === 开始属性合并阶段 ===
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1836] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1837] - INFO - 大模型修正结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1874] - INFO - 属性合并差异对比:
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   源端: 规则和大模型都缺失
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   对端: 规则和大模型一致 -> 上海的情况
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   源端类型: 规则和大模型都缺失
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   对端类型: 规则和大模型一致 -> IDC+MAN
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   时间: 规则和大模型一致 -> 昨天
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   时间粒度: 规则和大模型一致 -> 逐时
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   流向: 规则和大模型一致 -> ['流出']
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   数据类型: 规则和大模型一致 -> 流量均值
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   剔除条件: 规则和大模型都缺失
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   模糊匹配: 规则和大模型都缺失
+2026-01-10 15:53:11,208 - attribute_extraction_service.py[line:1876] - INFO -   上行下行: 规则和大模型一致 -> 上行
+2026-01-10 15:53:11,209 - attribute_extraction_service.py[line:1876] - INFO -   补充信息: 规则和大模型都缺失
+2026-01-10 15:53:11,209 - attribute_extraction_service.py[line:1878] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:11,209 - attribute_extraction_service.py[line:264] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:51,217 - attribute_extraction_service.py[line:252] - INFO - 开始属性提取 - 查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:53:51,217 - attribute_extraction_service.py[line:255] - INFO - === 开始规则提取阶段 ===
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:257] - INFO - 规则提取完成 - 结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:261] - INFO - === 开始大模型核验和修正阶段 ===
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1788] - INFO - 开始大模型核验和修正
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1789] - INFO - 输入查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1790] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1801] - INFO - 开始调用大模型API进行核验和修正
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1828] - ERROR - 大模型调用失败: Missing some input keys: {'\n  "attributes"'}
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1829] - INFO - 使用规则提取结果作为回退
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1835] - INFO - === 开始属性合并阶段 ===
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1836] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1837] - INFO - 大模型修正结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1874] - INFO - 属性合并差异对比:
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   源端: 规则和大模型都缺失
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   对端: 规则和大模型一致 -> 上海的情况
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   源端类型: 规则和大模型都缺失
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   对端类型: 规则和大模型一致 -> IDC+MAN
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   时间: 规则和大模型一致 -> 昨天
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   时间粒度: 规则和大模型一致 -> 逐时
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   流向: 规则和大模型一致 -> ['流出']
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   数据类型: 规则和大模型一致 -> 流量均值
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   剔除条件: 规则和大模型都缺失
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   模糊匹配: 规则和大模型都缺失
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   上行下行: 规则和大模型一致 -> 上行
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1876] - INFO -   补充信息: 规则和大模型都缺失
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:1878] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:53:51,220 - attribute_extraction_service.py[line:264] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:56:23,151 - attribute_extraction_service.py[line:255] - INFO - 开始属性提取 - 查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:56:23,152 - attribute_extraction_service.py[line:258] - INFO - === 开始规则提取阶段 ===
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:260] - INFO - 规则提取完成 - 结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:264] - INFO - === 开始大模型核验和修正阶段 ===
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1796] - INFO - 开始大模型核验和修正
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1797] - INFO - 输入查询: 查看昨天北京到上海的流量情况
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1798] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1809] - INFO - 开始调用大模型API进行核验和修正
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1836] - ERROR - 大模型调用失败: Missing some input keys: {'\n  "attributes"'}
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1837] - INFO - 使用规则提取结果作为回退
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1843] - INFO - === 开始属性合并阶段 ===
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1844] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1845] - INFO - 大模型修正结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1882] - INFO - 属性合并差异对比:
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1884] - INFO -   源端: 规则和大模型都缺失
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1884] - INFO -   对端: 规则和大模型一致 -> 上海的情况
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1884] - INFO -   源端类型: 规则和大模型都缺失
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1884] - INFO -   对端类型: 规则和大模型一致 -> IDC+MAN
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1884] - INFO -   时间: 规则和大模型一致 -> 昨天
+2026-01-10 15:56:23,154 - attribute_extraction_service.py[line:1884] - INFO -   时间粒度: 规则和大模型一致 -> 逐时
+2026-01-10 15:56:23,155 - attribute_extraction_service.py[line:1884] - INFO -   流向: 规则和大模型一致 -> ['流出']
+2026-01-10 15:56:23,155 - attribute_extraction_service.py[line:1884] - INFO -   数据类型: 规则和大模型一致 -> 流量均值
+2026-01-10 15:56:23,155 - attribute_extraction_service.py[line:1884] - INFO -   剔除条件: 规则和大模型都缺失
+2026-01-10 15:56:23,155 - attribute_extraction_service.py[line:1884] - INFO -   模糊匹配: 规则和大模型都缺失
+2026-01-10 15:56:23,155 - attribute_extraction_service.py[line:1884] - INFO -   上行下行: 规则和大模型一致 -> 上行
+2026-01-10 15:56:23,155 - attribute_extraction_service.py[line:1884] - INFO -   补充信息: 规则和大模型都缺失
+2026-01-10 15:56:23,155 - attribute_extraction_service.py[line:1886] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 15:56:23,155 - attribute_extraction_service.py[line:267] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 16:01:40,850 - attribute_extraction_service.py[line:252] - INFO - 开始属性提取 - 查询: 查看昨天北京到上海的流量情况
+2026-01-10 16:01:40,851 - attribute_extraction_service.py[line:255] - INFO - === 开始规则提取阶段 ===
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:257] - INFO - 规则提取完成 - 结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:261] - INFO - === 开始大模型核验和修正阶段 ===
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1791] - INFO - 开始大模型核验和修正
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1792] - INFO - 输入查询: 查看昨天北京到上海的流量情况
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1793] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1804] - INFO - 开始调用大模型API进行核验和修正
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1831] - ERROR - 大模型调用失败: Missing some input keys: {'\n  "attributes"'}
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1832] - INFO - 使用规则提取结果作为回退
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1838] - INFO - === 开始属性合并阶段 ===
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1839] - INFO - 规则提取结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1840] - INFO - 大模型修正结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1877] - INFO - 属性合并差异对比:
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1879] - INFO -   源端: 规则和大模型都缺失
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1879] - INFO -   对端: 规则和大模型一致 -> 上海的情况
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1879] - INFO -   源端类型: 规则和大模型都缺失
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1879] - INFO -   对端类型: 规则和大模型一致 -> IDC+MAN
+2026-01-10 16:01:40,853 - attribute_extraction_service.py[line:1879] - INFO -   时间: 规则和大模型一致 -> 昨天
+2026-01-10 16:01:40,854 - attribute_extraction_service.py[line:1879] - INFO -   时间粒度: 规则和大模型一致 -> 逐时
+2026-01-10 16:01:40,854 - attribute_extraction_service.py[line:1879] - INFO -   流向: 规则和大模型一致 -> ['流出']
+2026-01-10 16:01:40,854 - attribute_extraction_service.py[line:1879] - INFO -   数据类型: 规则和大模型一致 -> 流量均值
+2026-01-10 16:01:40,854 - attribute_extraction_service.py[line:1879] - INFO -   剔除条件: 规则和大模型都缺失
+2026-01-10 16:01:40,854 - attribute_extraction_service.py[line:1879] - INFO -   模糊匹配: 规则和大模型都缺失
+2026-01-10 16:01:40,854 - attribute_extraction_service.py[line:1879] - INFO -   上行下行: 规则和大模型一致 -> 上行
+2026-01-10 16:01:40,854 - attribute_extraction_service.py[line:1879] - INFO -   补充信息: 规则和大模型都缺失
+2026-01-10 16:01:40,854 - attribute_extraction_service.py[line:1881] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 16:01:40,854 - attribute_extraction_service.py[line:264] - INFO - 最终合并结果: {'源端': '', '对端': '上海的情况', '源端类型': '', '对端类型': 'IDC+MAN', '时间': '昨天', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 16:09:39,323 - attribute_extraction_service.py[line:108] - INFO - 开始属性提取 - 查询: 查询浙江到省外的流量数据，时间范围是最近一个月
+2026-01-10 16:09:39,324 - attribute_extraction_service.py[line:111] - INFO - === 开始规则提取阶段 ===
+2026-01-10 16:09:39,326 - attribute_extraction_service.py[line:113] - INFO - 规则提取完成 - 结果: {'源端': '浙江省', '对端': '省外的，时间范围是一个月', '源端类型': 'IDC+MAN', '对端类型': 'IDC+MAN', '时间': '最近一个月', '时间粒度': '逐时', '流向': ['流出'], '数据类型': '流量均值', '剔除条件': [], '模糊匹配': False, '上行下行': '上行', '补充信息': ''}
+2026-01-10 16:09:39,326 - attribute_extraction_service.py[line:123] - INFO - LLM未启用，仅使用规则提取结果
